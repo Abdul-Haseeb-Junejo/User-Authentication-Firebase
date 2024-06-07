@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="main">
+        <div class="userProfileDiv">
+            <img src="https://cdn0.iconfinder.com/data/icons/social-messaging-ui-color-shapes/128/user-male-circle-blue-512.png" alt="" class="userImg">
+            <h3>User Profile</h3>
+            <div class="userItemsDiv">
+                <input type="email" id="verifyemailInput" disabled>
+                <div class="verificationDiv">
+                    <span id="iconSpan"><i class="fa-regular fa-circle-xmark verifiedIcon"></i></span>
+                    <!-- class="verifiedIcon"> -->
+                    <span id="textSpan" class="verifyText">unverified</span>
+                </div>
+            </div>
+            
+            <div class="sendEmailDiv">
+                <button id="sendEmailBtn" class="sendEmailBtn">Send Email</button>
+                <img class="sendEmailImg" src="./icons/send-mail.png" alt="">
+            </div>
+            <button class="signoutBtn" id="signoutBtn">SignOut</button>
+        </div>
+    </div>    
+
+    <script src="user.js" type="module"></script>
+</body>
+
+</html>
