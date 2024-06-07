@@ -6,6 +6,10 @@ body{
     font-family: Static;
 }
 
+h1{
+    font-size: 48px;
+    font-weight: 700;
+}
 .signInDiv{
    width: 400px;
    height: 450px;
