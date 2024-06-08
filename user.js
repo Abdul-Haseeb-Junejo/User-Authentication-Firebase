@@ -16,7 +16,7 @@ onAuthStateChanged(auth, (user) => {
     if(user.emailVerified === true){
         iconSpan.innerHTML = `<i class="fa-solid fa-check"></i>`;
         iconSpan.style.color = "green";
-        iconSpan.style.backgroundColor = "white";
+        // iconSpan.style.backgroundColor = "white";
         textSpan.innerText = "Verified";
          
       }

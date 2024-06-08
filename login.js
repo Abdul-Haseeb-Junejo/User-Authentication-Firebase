@@ -1,4 +1,4 @@
-import {auth, signInWithEmailAndPassword, onAuthStateChanged} from "./firebase.js";
+import {auth, signInWithEmailAndPassword, onAuthStateChanged,sendPasswordResetEmail } from "./firebase.js";
 
 const loginEmail = document.getElementById('loginEmail');
 const loginPassword = document.getElementById('loginPassword');
@@ -43,3 +43,29 @@ onAuthStateChanged(auth, (user) => {
   }
 });
 
+const resetPassword = () =>{
+const user = auth.currentUser
+sendPasswordResetEmail(auth, user.email)
+  .then(() => {
+    alert("Check your Email for reset Password");
+    console.log("Password reset email sent!"); 
+  })
+  .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    console.log("error");
+  });
+}
+
+const resetBtn = document.getElementById('resetBtn');
+
+resetBtn.addEventListener("click" , resetPassword)
+
+// const user = auth.currentUser;
+// const newPassword = getASecureRandomPassword();
+// updatePassword(user, newPassword).then(() => {
+//   // Update successful.
+// }).catch((error) => {
+//   // An error ocurred
+//   // ...
+// });
