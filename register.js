@@ -26,3 +26,20 @@ const register = ()=>{
 const registerBtn = document.getElementById('registerBtn');
 
 registerBtn.addEventListener("click",register);
+
+const seePasswordIcon = () => {
+  if (registerPassword.type === "password") {
+    registerPassword.type = "text";
+      eyeIcon.style.display = "none";
+      eyeSlashIcon.style.display = "block";
+  } else {
+    registerPassword.type = "password";
+      eyeIcon.style.display = "block";
+      eyeSlashIcon.style.display = "none";
+  }
+}
+
+const eyeIcon = document.getElementById('eyeIcon');
+const eyeSlashIcon = document.getElementById('eyeSlashIcon');
+eyeIcon.addEventListener("click", seePasswordIcon);
+eyeSlashIcon.addEventListener("click", seePasswordIcon);

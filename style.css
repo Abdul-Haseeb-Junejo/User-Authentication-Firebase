@@ -8,7 +8,7 @@ body {
     background-color: rgb(249, 252, 252);
 }
 
-.loginImg,.regImgDiv {
+.loginImg, .regImgDiv {
     height: 70vh;
     background-color: rgb(193, 225, 237);
     border-top-left-radius: 10px;
@@ -16,7 +16,7 @@ body {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 3px;
 }
 
-.mainImg,.registrationImg{
+.mainImg, .registrationImg {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -49,7 +49,19 @@ h1 {
     outline: none;
 }
 
-#resetBtn{
+.password {
+    position: relative;
+}
+
+.iconEye {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+#resetBtn {
     border: none;
     text-decoration: underline;
     background: transparent;
@@ -70,7 +82,7 @@ h1 {
     .signInDiv {
         border-radius: 10px;
     }
-    .regImgDiv{
-        display: none!important;
+    .regImgDiv {
+        display: none !important;
     }
 }
